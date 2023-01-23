@@ -52,23 +52,23 @@ public class Picture
             powerup.changeColor("green");
             powerup.changeSize(15, 45);
             powerup.moveHorizontal(20);
-            powerup.moveVertical(-60);
+            powerup.moveVertical(-35);
             powerup.makeVisible();
     
             koopa.changeColor("blue");
             koopa.changeSize(15, 45);
-            koopa.moveHorizontal(20);
-            koopa.moveVertical(-1);
+            koopa.moveHorizontal(30);
+            koopa.moveVertical(75);
             koopa.makeVisible();
             
             goomba.changeColor("blue");
             goomba.moveHorizontal(100);
-            goomba.moveVertical(-1);
+            goomba.moveVertical(120);
             goomba.changeSize(20);
             goomba.makeVisible();
             
             mario.changeColor("red");
-            mario.moveHorizontal(-90);
+            mario.moveHorizontal(-135);
             mario.moveVertical(-1);
             mario.makeVisible();
             
