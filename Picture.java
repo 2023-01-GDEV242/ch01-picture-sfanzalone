@@ -37,30 +37,30 @@ public class Picture
             block.changeColor("blue");
             block.moveHorizontal(-140);
             block.moveVertical(20);
-            block.changeSize(120);
+            block.changeSize(40);
             block.makeVisible();
             
             questionBlock.changeColor("yellow");
-            questionBlock.moveHorizontal(-120);
-            questionBlock.moveVertical(40);
+            questionBlock.moveHorizontal(-100);
+            questionBlock.moveVertical(20);
             questionBlock.changeSize(40);
             questionBlock.makeVisible();
     
             powerup.changeColor("green");
-            powerup.changeSize(60, 180);
+            powerup.changeSize(15, 45);
             powerup.moveHorizontal(20);
             powerup.moveVertical(-60);
             powerup.makeVisible();
     
             goomba.changeColor("blue");
             goomba.moveHorizontal(100);
-            goomba.moveVertical(-40);
-            goomba.changeSize(80);
+            goomba.moveVertical(-1);
+            goomba.changeSize(20);
             goomba.makeVisible();
             
             mario.changeColor("red");
-            mario.moveHorizontal(-1);
-            mario.moveVertical(-10);
+            mario.moveHorizontal(-10);
+            mario.moveVertical(-1);
             mario.makeVisible();
             
             drawn = true;
