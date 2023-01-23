@@ -1,6 +1,7 @@
 /**
  * This will be a simple representation of an iconic videogame level
- * from Super Mario Bros., 1-1.
+ * from Super Mario Bros., 1-2.  This was going to resemble 1-1, but
+ * colors such as brown don't work well in BlueJ.
  * 
  * @author  Salvatore Anzalone
  * @version 1/23/2023
@@ -33,7 +34,7 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            block.changeColor("brown");
+            block.changeColor("blue");
             block.moveHorizontal(-140);
             block.moveVertical(20);
             block.changeSize(120);
@@ -45,13 +46,13 @@ public class Picture
             questionBlock.changeSize(40);
             questionBlock.makeVisible();
     
-            powerup.changeColor("orange");
+            powerup.changeColor("green");
             powerup.changeSize(60, 180);
             powerup.moveHorizontal(20);
             powerup.moveVertical(-60);
             powerup.makeVisible();
     
-            goomba.changeColor("brown");
+            goomba.changeColor("blue");
             goomba.moveHorizontal(100);
             goomba.moveVertical(-40);
             goomba.changeSize(80);
@@ -83,10 +84,10 @@ public class Picture
      */
     public void setColor()
     {
-        block.changeColor("brown");
+        block.changeColor("blue");
         questionBlock.changeColor("yellow");
-        powerup.changeColor("orange");
-        goomba.changeColor("brown");
+        powerup.changeColor("green");
+        goomba.changeColor("blue");
         mario.changeColor("red");
     }
 }
