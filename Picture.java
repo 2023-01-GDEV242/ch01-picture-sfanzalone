@@ -33,23 +33,25 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            block.changeColor("brown");
             block.moveHorizontal(-140);
             block.moveVertical(20);
             block.changeSize(120);
             block.makeVisible();
             
-            questionBlock.changeColor("black");
+            questionBlock.changeColor("yellow");
             questionBlock.moveHorizontal(-120);
             questionBlock.moveVertical(40);
             questionBlock.changeSize(40);
             questionBlock.makeVisible();
     
+            powerup.changeColor("orange");
             powerup.changeSize(60, 180);
             powerup.moveHorizontal(20);
             powerup.moveVertical(-60);
             powerup.makeVisible();
     
-            goomba.changeColor("yellow");
+            goomba.changeColor("brown");
             goomba.moveHorizontal(100);
             goomba.moveVertical(-40);
             goomba.changeSize(80);
