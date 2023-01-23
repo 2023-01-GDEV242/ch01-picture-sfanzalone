@@ -6,15 +6,16 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Salvatore Anzalone
+ * @version 1/23/2023
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Square block;
+    private Square questionBlock;
+    private Triangle powerup;
+    private Circle goomba;
+    private Person mario;
     private boolean drawn;
 
     /**
@@ -22,10 +23,11 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        block = new Square();
+        questionBlock = new Square();
+        powerup = new Triangle();  
+        goomba = new Circle();
+        mario = new Person();
         drawn = false;
     }
 
@@ -35,27 +37,33 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            block.moveHorizontal(-140);
+            block.moveVertical(20);
+            block.changeSize(120);
+            block.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
+            questionBlock.changeColor("black");
+            questionBlock.moveHorizontal(-120);
+            questionBlock.moveVertical(40);
+            questionBlock.changeSize(40);
+            questionBlock.makeVisible();
     
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
+            powerup.changeSize(60, 180);
+            powerup.moveHorizontal(20);
+            powerup.moveVertical(-60);
+            powerup.makeVisible();
     
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            goomba.changeColor("yellow");
+            goomba.moveHorizontal(100);
+            goomba.moveVertical(-40);
+            goomba.changeSize(80);
+            goomba.makeVisible();
+            
+            mario.changeColor("red");
+            mario.moveHorizontal(-1);
+            mario.moveVertical(-10);
+            mario.makeVisible();
+            
             drawn = true;
         }
     }
@@ -65,10 +73,11 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
+        block.changeColor("black");
+        questionBlock.changeColor("black");
+        powerup.changeColor("black");
+        goomba.changeColor("black");
+        mario.changeColor("black");
     }
 
     /**
@@ -76,9 +85,10 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
+        block.changeColor("brown");
+        questionBlock.changeColor("yellow");
+        powerup.changeColor("orange");
+        goomba.changeColor("brown");
+        mario.changeColor("red");
     }
 }
