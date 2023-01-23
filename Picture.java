@@ -1,7 +1,8 @@
 /**
  * This will be a simple representation of an iconic videogame level
- * from Super Mario Bros., 1-2.  This was going to resemble 1-1, but
- * colors such as brown don't work well in BlueJ.
+ * location from Super Mario Bros., 1-2.  This was going to
+ * resemble 1-1, but colors such as brown don't work well in BlueJ,
+ * unless I make changes in the Canvas class.
  * 
  * @author  Salvatore Anzalone
  * @version 1/23/2023
@@ -11,6 +12,7 @@ public class Picture
     private Square block;
     private Square questionBlock;
     private Triangle powerup;
+    private Triangle koopa;
     private Circle goomba;
     private Person mario;
     private boolean drawn;
@@ -22,7 +24,8 @@ public class Picture
     {
         block = new Square();
         questionBlock = new Square();
-        powerup = new Triangle();  
+        powerup = new Triangle();
+        koopa = new Triangle();
         goomba = new Circle();
         mario = new Person();
         drawn = false;
@@ -36,13 +39,13 @@ public class Picture
         if(!drawn) {
             block.changeColor("blue");
             block.moveHorizontal(-140);
-            block.moveVertical(20);
+            block.moveVertical(3);
             block.changeSize(40);
             block.makeVisible();
             
             questionBlock.changeColor("yellow");
             questionBlock.moveHorizontal(-100);
-            questionBlock.moveVertical(20);
+            questionBlock.moveVertical(3);
             questionBlock.changeSize(40);
             questionBlock.makeVisible();
     
@@ -52,6 +55,12 @@ public class Picture
             powerup.moveVertical(-60);
             powerup.makeVisible();
     
+            koopa.changeColor("blue");
+            koopa.changeSize(15, 45);
+            koopa.moveHorizontal(20);
+            koopa.moveVertical(-1);
+            koopa.makeVisible();
+            
             goomba.changeColor("blue");
             goomba.moveHorizontal(100);
             goomba.moveVertical(-1);
@@ -59,7 +68,7 @@ public class Picture
             goomba.makeVisible();
             
             mario.changeColor("red");
-            mario.moveHorizontal(-10);
+            mario.moveHorizontal(-90);
             mario.moveVertical(-1);
             mario.makeVisible();
             
@@ -75,6 +84,7 @@ public class Picture
         block.changeColor("black");
         questionBlock.changeColor("black");
         powerup.changeColor("black");
+        koopa.changeColor("black");
         goomba.changeColor("black");
         mario.changeColor("black");
     }
@@ -87,6 +97,7 @@ public class Picture
         block.changeColor("blue");
         questionBlock.changeColor("yellow");
         powerup.changeColor("green");
+        koopa.changeColor("blue");
         goomba.changeColor("blue");
         mario.changeColor("red");
     }
